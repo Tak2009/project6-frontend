@@ -5,23 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./stylesheets/style.css">
+    <link id="style-type" rel="stylesheet" href="./stylesheets/style1.css">
     <title>Test_TK_jQuery.BgSwitcher</title>
     
 </head>
  
 <body>
     
-    <div class="bg-switcher">
-        <h1 class="bg">BgSwitcher テスト</h1>
-        <div id="btn" class="bg"></div>
-     </div>
+    <div id="layout">
+        <div id="layout-type" class="bg-switcher">
+        <h1 class="bg-title">BgSwitcher テスト</h1>
+        <!-- <button id="type1">Change layout</button> -->
+        </div>
+    </div>
 
-    
- 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./src/jquery.bgswitcher.js"></script>
-    <script src="./src/index.js"></script>
     <script id="script-type" class="script-type1">
         jQuery(function($) {
     $('.bg-switcher').bgSwitcher({
@@ -35,7 +34,8 @@
         easing: "swing", //エフェクトのイージング "swing" "linear"
     });
 });
-    </script> 
+    </script>
+    <script src="./src/index.js"></script>
 </body>
  
 </html>
