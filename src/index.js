@@ -5,12 +5,6 @@ const layoutType = document.querySelector("#layout-type")
 let layoutBtn = document.querySelector("#type1")
 
 
-// const renderBtns = () => {
-//     layoutBtn.addEventListener("click", (e)=> {
-//         changeLayout(layoutBtn)
-//     })
-// };
-
 const addEventToLayoutBtn = (btn) => {
     btn.addEventListener("click", (e)=> {
                 changeLayout(btn)
@@ -23,7 +17,7 @@ const changeLayout = (btn) => {
         layoutType.innerHTML = `<div class="row">
                                  <div class="col-md-6 bg-left">
                                   <h1 class="bg-title">BgSwitcher Test</h1>
-                                  <button id="type2" ="col-md-6">Change layout</button>
+                                  <button id="type2" class="button">Change layout</button>
                                  </div>
                                  <div class="bg-switcher col-md-6">
                                  </div>
@@ -41,13 +35,13 @@ const changeLayout = (btn) => {
                                    });
                                 });`
         // debugger
-        let btn = document.querySelector("#type2")
-        addEventToLayoutBtn(btn)
+        // let btn = document.querySelector(".button")
+        // addEventToLayoutBtn(btn)
     } else {
         styleType.href = "./stylesheets/style1.css"
         layoutType.innerHTML = `<div id="layout-type" class="bg-switcher">
                                  <h1 class="bg-title">BgSwitcher テスト</h1>
-                                 <button id="type1">Change layout</button>
+                                 <button id="type1" class="button">Change layout</button>
                                 </div>`
         scriptType.innerHTML = `jQuery(function($) {
                                 $('.bg-switcher').bgSwitcher({
@@ -62,10 +56,11 @@ const changeLayout = (btn) => {
                                    });
                                 });`
 
-        let btn = document.querySelector("#type1")
-        addEventToLayoutBtn(btn)
+        // let btn = document.querySelector(".button")
+        // addEventToLayoutBtn(btn)
     }
-    
+    let btnWithoutEvent = document.querySelector(".button")
+    addEventToLayoutBtn(btnWithoutEvent)
 }
 
 addEventToLayoutBtn(layoutBtn)
